@@ -1,0 +1,38 @@
+﻿@model WebApp_Noite.Models.ClientesModel
+
+<div class="row">
+    <div class="col-4">
+    </div>
+    <div class="col-4">
+
+        <div class="card">
+            <div class="card-header">
+                <h2>Cadastro de Cliente</h2>
+            </div>
+            <div class="card-body">
+                <form action="/Cliente/SalvarDados" method="post">
+
+                    <label>Id</label>
+                    <input readonly name="Id" value="@Model.Id" class="form-control" />
+                    <br />
+
+                    <label>Nome</label>
+                    <input type="text" value="@Model.Nome" name="Nome" class="form-control" />
+                    <br />
+
+                    <label>Telefone</label>
+                    <input type="tel" value="@Model.Telefone" name="Telefone" class="form-control" />
+                    <br />
+
+                    <button type="submit" class="btn btn-info">
+                        Salvar Cliente
+                    </button>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-4">
+    </div>
+</div>
