@@ -11,12 +11,16 @@
             </div>
             <div class="card-body">
                 <form action="/Produto/SalvarDados" method="post">
+
+                    <label>Id</label>
+                    <input name="Id" type="text" value="@Model.Id" readonly class="form-control" />
+
                     <label>Nome</label>
-                    <input type="text" name="Nome" class="form-control" />
+                    <input type="text" value="@Model.Nome" name="Nome" class="form-control" />
                     <br />
 
                     <label>Quantidade em Estoque</label>
-                    <input type="number" name="QtdEstoque" class="form-control" />
+                    <input type="number" value="@Model.QtdEstoque" name="QtdEstoque" class="form-control" />
                     <br />
 
                     <button type="submit" class="btn btn-info">
@@ -26,7 +30,7 @@
                 </form>
             </div>
         </div>
-    
+
     </div>
     <div class="col-4">
         coluna da direita

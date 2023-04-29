@@ -1,4 +1,5 @@
-﻿<div class="row">
+﻿@model List<WebApp_Noite.Models.ProdutoModel>
+<div class="row">
    
 
     <div class="col-12">
@@ -52,56 +53,27 @@
                     </thead>
 
                     <tbody>
+                        @foreach(var produto in Model){
+
+                        
                         <tr>
-                            <td>1</td>
-                            <td>Mouse Gamer</td>
-                            <td>150</td>
+                            <td>@produto.Id</td>
+                            <td>@produto.Nome</td>
+                            <td>@produto.QtdEstoque</td>
                             <td>
-                                <a href="/Produto/Editar/1"
+                                <a href="/Produto/Editar/@produto.Id"
                                         class="btn btn-warning">
                                     Editar
                                     </a>
-                                <a href="/Produto/Excluir/1"
+                                <a href="/Produto/Excluir/@produto.Id"
                                         class="btn btn-danger">
                                     Excluir
                                     </a>
 
                             </td>
                         </tr>
-
-                        <tr>
-                            <td>2</td>
-                            <td>Barbie Unicornio Feliz</td>
-                            <td>10</td>
-                            <td>
-                                <a href="/Produto/Editar/2"
-                                   class="btn btn-warning">
-                                    Editar
-                                </a>
-                                <a href="/Produto/Excluir/2"
-                                   class="btn btn-danger">
-                                    Excluir
-                                </a>
-
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>3</td>
-                            <td>Cerveja Antartica BOA !</td>
-                            <td>23</td>
-                            <td>
-                                <a href="/Produto/Editar/3"
-                                   class="btn btn-warning">
-                                    Editar
-                                </a>
-                                <a href="/Produto/Excluir/3"
-                                   class="btn btn-danger">
-                                    Excluir
-                                </a>
-
-                            </td>
-                        </tr>
+                        }
+                        
                     </tbody>
                 </table>
 
