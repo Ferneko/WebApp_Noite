@@ -1,7 +1,17 @@
+using Microsoft.EntityFrameworkCore;
+using WebApp_Noite;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<Contexto>(
+    //opt => opt.UseSqlServer("Server=c3po;Database=pw_noite_Ferneko;Trusted_Connection=True;")
+    opt => opt.UseSqlServer("Server=c3po;Database=pw_noite_Ferneko;User Id=sa;Password=aluno123;")
+    );
+
+
 
 var app = builder.Build();
 
