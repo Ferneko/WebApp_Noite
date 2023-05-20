@@ -19,53 +19,55 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
 
-                        <li class="nav-item">
-
-                            <a href="/Home/MinhaTela" class="nav-link text-dark">
-                                   Minha Tela 
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Listas
                             </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item" href="/Categorias/Lista">
+                                        Categorias
+                                    </a>
+                                </li>
 
+                                <li>
+                                    <a class="dropdown-item" href="/Produto/Lista">
+                                        Produtos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/Cliente/Lista">
+                                        Clientes
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
 
-                         <li class="nav-item">
 
-                            <a href="/Home/Login" class="nav-link text-dark">
-                                    logar 
-                           </a>
-
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="/Produto/Lista" class="nav-link text-dark">
-                                Lista de Produtos    
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Cadastro
                             </a>
-                        </li>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item" href="/Categorias/Cadastro">
+                                        Categorias
+                                    </a>
+                                </li>
 
-                        <li class="nav-item">
-                            <a href="/Cliente/Lista" class="nav-link text-dark">
-                                Lista de Clientes
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="/Categorias/Lista" class="nav-link text-dark">
-                                Lista de Categorias
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="/Categorias/Cadastro" class="nav-link text-dark">
-                                Cadastro de Categorias
-                            </a>
+                                <li>
+                                    <a class="dropdown-item" href="/Produto/Cadastrar">
+                                        Produtos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/Cliente/Cadastro">
+                                        Clientes
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
 
 

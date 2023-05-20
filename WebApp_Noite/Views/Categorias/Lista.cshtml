@@ -1,43 +1,76 @@
 ﻿@model List<WebApp_Noite.Tabelas.Categorias>
 
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>
-                Id
-            </th>
-            <th>
-                Nome
-            </th>
-            <th>
-                Ativo
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach(var categoria in Model)
-        {
-            <tr>
-                <td>
-                    @categoria.Id
-                    </td>
-                <td>
-                    @categoria.Nome
-                </td>
-                <td>
-                    @if(categoria.Ativo == true)
-                    {
-                        <input type="checkbox" checked />
-                    }else{
-                        <input type="checkbox" />
-                    }
+<div class="card">
+    <div class="card-header">
+        Lista de categorias
+    </div>
+    <div class="card-body">
+        <form action="/Categorias/Lista" method="get">
+            <div class="row">
+                    <div class="col-2">
+                        <a href="/Categorias/Cadastrar"
+                            class="btn btn-success">
+                            Novo
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" name="Busca"
+                            class="form-control" />
+                    </div>
+                    <div class="col-4">
+                        <button type="submit" 
+                            class="btn btn-primary">
+                            Pesquisar
+                        </button>
+                    </div>
+            </div>
+        </form>
 
-                </td>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Id
+                    </th>
+                    <th>
+                        Nome
+                    </th>
+                    <th>
+                        Ativo
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var categoria in Model)
+                {
+                    <tr>
+                        <td>
+                            @categoria.Id
+                        </td>
+                        <td>
+                            @categoria.Nome
+                        </td>
+                        <td>
+                            @if (categoria.Ativo == true)
+                            {
+                                <input type="checkbox" checked />
+                            }
+                            else
+                            {
+                                <input type="checkbox" />
+                            }
 
-                <td></td>
-            </tr>
-        }
-    </tbody>
+                        </td>
 
-</table>
+                        <td></td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+
+    </div>
+</div>
+
+
